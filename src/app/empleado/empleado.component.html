@@ -1,0 +1,39 @@
+<p>empleado works!</p>
+<h1> Bienvenido a Empleado</h1>
+
+<div class="margen">
+    <!-- <h1>HOLA MUNDO </h1>
+  <h2>{{descripcion}}</h2>
+
+
+  <app-persona></app-persona> -->
+
+
+    <form>
+        <div class="form-group">
+            <label for="nombre">Primer Nombre</label>
+            <input type="text" [(ngModel)]="persona.nombre" class="form-control" name="nombre" placeholder="Ingresar nombre">
+        </div>
+        <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" [(ngModel)]="persona.apellido" class="form-control" name="apellido" placeholder="Ingresar apellido">
+        </div>
+        <div class="form-group">
+            <label for="contacto">Contacto</label>
+            <input type="text" [(ngModel)]="persona.contacto" class="form-control" name="contacto" placeholder="Ingresar numero telefonico">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="guardar()">GUARDAR</button>
+    </form>
+
+
+    <!-- <div *ngFor=" let persona of listaEstudiantes">
+      <h3 style="color:blue">{{persona}}</h3>
+  </div> -->
+    <div *ngFor=" let p of listaPersonas">
+        <h3 style="color:red">{{p.nombre}}</h3>
+        <h4 style="color:purple">{{p.apellido}}</h4>
+        <h5 style="color:blue">{{p.contacto}}</h5>
+        <p>----------------------</p>
+
+    </div>
+</div>
