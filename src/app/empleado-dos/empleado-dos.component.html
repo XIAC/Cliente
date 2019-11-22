@@ -1,0 +1,68 @@
+<div class="container margen">
+    <h1 class="text-center">Nuevo empleado</h1>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="card col-lg-6 margen_interno">
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" [(ngModel)]="empleado.nombre" class="form-control" name="nombre" placeholder="Ingresar nombre">
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Email</label>
+                    <input type="email" [(ngModel)]="empleado.email" class="form-control" name="email" placeholder="Ingresar correo electrónico">
+                </div>
+                <div class="form-group">
+                    <label for="contacto">Telefono</label>
+                    <input type="text" [(ngModel)]="empleado.telefono" class="form-control" name="telefono" placeholder="Ingresar número telefónico">
+                </div>
+                <div class="form-group">
+                    <label for="contacto" class="control-label">Estado civil</label>
+                    <select [(ngModel)]="empleado.EstadoCivil" class="form-control" name="estadoCivil" placeholder="Ingresar estado civil">
+                        <option value="Soltero">Soltero</option>
+                        <option value="Casado">Casado</option>
+                        <option value="Viudo">Viudo</option>
+                    </select>                    
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="guardar()">GUARDAR</button>
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+
+    <!-- <div *ngFor=" let persona of listaEstudiantes">
+      <h3 style="color:blue">{{persona}}</h3>
+  </div> -->
+
+    <div class="row">
+        <div class="card col-lg-10 margen_interno">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Estado civil</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor=" let p of listaEmpleados">
+                        <tr>
+                            <td>
+                                {{p.nombre}}
+                            </td>
+                            <td>
+                                {{p.email}}
+                            </td>
+                            <td>
+                                {{p.telefono}}
+                            </td>
+                            <td>
+                                {{p.EstadoCivil}}
+                            </td>
+                        </tr>
+                    <!-- </div> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
