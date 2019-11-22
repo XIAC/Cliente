@@ -1,0 +1,54 @@
+<div class="container margenFormulario">
+    <div class="row justify-content-md-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success">
+                    <h5 class="card-title text-center text-white"> <i class="fa fa-envelope"></i>  Contactanos</h5>
+                    <h6 class="card-subtitle mb-2 text-center text-light">Con gusto te ayudaremos</h6>
+                </div>
+                <div class="card-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text fa fa-user" id="basic-addon1"></span>
+                        </div>
+                        <input type="text" [(ngModel)]="contactito.nombre" class="form-control" placeholder="Nomble completo" aria-label="nombre" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text fa fa-envelope-square" id="basic-addon1"></span>
+                        </div>
+                        <input type="text" [(ngModel)]="contactito.email" class="form-control" placeholder="ejemplo@gmail.com" aria-label="email"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text fa fa-comments"></span>
+                        </div>
+                        <textarea [(ngModel)]="contactito.mensaje" class="form-control" aria-label="With textarea" placeholder="Envianos tu mensaje" rows="2"></textarea>
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-outline-success btn-block"  (click)="guardar()" >Success <i class="fa fa-send"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Mensaje</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor=" let p of listaContactitos">
+                    <tr>
+                        <td>{{p.nombre}}</td>
+                        <td>{{p.email}}</td>
+                        <td>{{p.mensaje}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>
